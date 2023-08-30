@@ -56,7 +56,7 @@ table {
 
 /**header**/
 body{
-	background-image: url('../assets/gradient_2.jpg');
+	background-image: url('assets/gradient_2.jpg');
 	background-size: 100%;
 	display: flex;
 	overflow: hidden;
