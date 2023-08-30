@@ -1,0 +1,382 @@
+/** CSS Reset **/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/** Batas CSS Reset **/
+
+@font-face {
+	font-family: 'kaushan';
+	src: url('../font/blackjack/blackjack-webfont.woff') format('woff');
+	font-family: 'ostrich' ;
+	src: url('../font/ostrich-sans/ostrichsans-black-webfont.woff') format('woff');
+	font-family: 'greatvibes';
+	src: url('../font/great-vibes/greatvibes-regular-webfont.woff') format('woff');
+}
+
+/**header**/
+body{
+	background-image: url('../assets/gradient_2.jpg');
+	background-size: 100%;
+	display: flex;
+	overflow: hidden;
+}
+
+.container{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+
+}
+
+nav {
+	display: flex;
+	padding-top: 8px;
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+	height: 8%;
+}
+
+.brand {
+	display: flex;
+	flex-direction: row;
+	margin-left: 5%;
+}
+
+.name {
+	font-family: 'greatvibes';
+	font-size: 40px;
+	margin: 15px;
+	font-weight: bold;
+}
+
+.profesi {
+	display: flexbox;
+	justify-content: center;
+	align-items: center;
+	line-height: 90px;
+	margin-left: 5px;
+	font-family: 'ostrich';
+}
+
+nav ul {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 5%;
+}
+
+nav ul li {
+	list-style-type: none;
+	padding: 15px;
+}
+
+nav ul li a{
+	color:rgb(241, 228, 228);
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 20px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav ul li a:hover{
+	color: black;
+}
+
+/**body**/
+
+.welcome{
+	margin:5% 5% 0% 5%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.welcome img{
+	width: 35%;
+	border-radius: 100%;
+	transition: .5s;
+}
+
+.welcome img:hover {
+	width: 35%;
+	background-color: blue;
+}
+
+.hello{
+	margin: 5%;
+	width: 40%;
+	height: 30%;
+	text-align: justify;
+}
+
+.hello h1{
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 30px;
+	color: rgb(235, 224, 224);
+	margin-top: 1%;
+}
+
+.hello h2{
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 55px;
+	color: rgb(255, 245, 248);
+	margin-top: 1%;
+}
+
+.hello p{
+	margin-top: 3%;
+	font-size: 18px;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+	word-spacing: 0.1em;
+	color: black;
+}
+
+.hello a{
+	background: black;
+	padding: 10px 20px;
+	text-decoration: none;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	color:rgb(126, 101, 110);
+	display: inline-block;
+	margin: 25px 0;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.hello a:hover{
+	background-color: rgb(224, 168, 177);
+	color: black;
+}
+
+.logo{
+	display: flex;
+	margin:-80px 50px 50px 65px;
+	width: 100%;
+	justify-content: center;
+}
+
+.logo img{
+	width: 4%;
+	margin: 10px;
+	transition: 1s;
+}
+
+.logo img:hover{
+	width:5% ;
+}
+
+
+/**Bagian responsive Web**/
+
+/**hamburger menu**/
+
+.menu-toggle{
+	display: none;
+	justify-content: space-between;
+	margin: 5%;
+	position: relative;
+
+}
+
+.menu-toggle input{
+	position: absolute;
+	opacity: 0;
+	width: 40px;
+	height: 28px;
+	left: -10px;
+	top: -10px;
+	cursor: pointer;
+}
+
+.menu-toggle span{
+	display: block;
+	margin: 2px;
+	width: 5px;
+	height: 5px;
+	background-color: black;
+	border-radius: 100%;
+	transition: all 0.5s;
+}
+
+.deskripsi{
+	display: none	;
+}
+
+
+/** hamburger menu animation**/
+
+.menu-toggle input:checked ~ span:nth-child(2){
+	translate: 9px 6px;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+	translate: -9px -6px;
+}
+
+/**tablet**/
+@media screen and (max-width:768px)
+{
+	body{
+		background: blue;
+	}
+	nav ul li
+		{
+			width: 20%;
+		}
+
+	.welcome img{
+		border-radius: 0;
+		width: 80%;
+	}
+}
+/**mobile**/
+
+@media screen and (max-width:576px)
+{
+	body {
+		background: #191D88 ;
+		overflow-y: scroll;
+		width: auto;
+		height: fit-content;
+	}
+
+	.brand {
+		flex-direction: column;
+	}
+
+	.brand .name{
+	margin: 0;
+	letter-spacing: 2px;
+	}
+
+	.brand .profesi{
+		line-height: normal;
+		text-align: left;
+		font-size: 11px;
+	}
+
+	nav{
+		background-color:#ffffff;	
+		height: 7;
+		padding-top: 5px;
+	}
+
+	.menu-toggle{
+		display: flex;		
+	}
+
+	nav ul{
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 40%;
+		width: 40%;
+		margin-right: 0;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-direction: column;
+		background: linear-gradient(white,skyblue);
+		border-radius: 5%;
+		transform: translateX(100%);
+		transition: all 1s;
+		z-index: -1;
+	}
+
+	nav ul li{
+		margin: 38px 30px 0 0;
+	}
+	nav ul.slide{
+		transform: translateX(0);
+	}
+
+	.welcome {
+		flex-direction: column;
+		margin: 5% 0 0 0;
+	}
+
+	.welcome img{
+		width: 100%;
+		margin: -30px 0 0 0;
+		z-index: -2;
+		background-color: #ffffff;
+	}
+
+	.hello {
+		margin: -100px 0px 50px 0;
+		width: 100%;
+		height: 100%;
+		text-align: justify;
+		background: #191D88 ;
+		border-radius: 0 25% 0% 0;
+	}
+
+	.hello h2, h1, p{
+		margin:5% 5% 0% 5%;
+	}
+
+	.hello h1{
+		color: white;
+	}
+ 
+	.hello h2{
+		color: #ffffff;
+	}
+
+	.hello p{
+		color: rgb(114, 119, 119);
+	}
+	.hello a{
+		background-color: white;
+		margin:2% 5% 2% 5%;
+		cursor: pointer;
+		display: none;
+	}
+
+	.logo{
+		display: none;
+	}
+
+}
